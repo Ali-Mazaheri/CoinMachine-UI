@@ -1,0 +1,44 @@
+
+.adminPanel{
+    display: flex;
+    max-width: 500px;
+    flex-direction: column;
+    padding: 50px 15px 0 10px;
+    margin: auto;
+}
+.adminPanel .rowContainer{
+    flex: 1;
+    display: flex;
+}
+.adminPanel .rowContainer.header{
+    padding: 5px 5px 60px 5px;
+}
+.adminPanel .rowContainer .unit,
+.adminPanel .rowContainer .update{
+    padding: 2px;
+    margin: 2px;
+    flex: 1;
+}
+.adminPanel .rowContainer .quantity{
+    flex:2;
+    text-align: right;
+}
+
+.adminPanel .rowContainer input.update{
+    height: 35px;
+    border: solid 1px #eeeeee;
+    border-radius: 2px;
+    background-color: #fafafa;
+    
+    outline: none;
+    padding: 0 5px;
+}
+
+.adminPanel .buttonBox{
+    display: flex;
+    margin-top: 50px;
+    justify-content: space-around;
+    text-align: left;
+    
+    padding: 2px 0 50px 20px;
+}

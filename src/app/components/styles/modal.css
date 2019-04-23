@@ -1,0 +1,136 @@
+:host {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: +1;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.container {
+    position: relative;
+    width: 400px;
+    min-height: 150px;
+    margin: auto auto auto auto;
+    top: calc(50vh - 150px);
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 50px 1px rgba(0,0,0,.65);
+}
+
+.header, .footer {
+    height: 32px;
+    width: inherit;
+    position: absolute;
+    background-color: #f1f3f3;
+}
+
+.header {
+    top: 0;
+    border-radius: 5px 5px 0 0;
+}
+
+.title {
+    display: inline-block;
+    padding: 8px 5px 0 10px;
+    font-weight: bolder;
+}
+
+.body {
+    width: inherit;
+    height: 100%;
+    padding: 40px 10px;
+}
+
+.footer {
+    bottom: 0;
+    border-radius: 0 0 5px 5px;
+}
+
+    .footer .button {
+        float: right;
+        margin: 7px 15px 0 0;
+        min-width: 50px;
+        max-width: 70px;
+        border-radius: 2px;
+        padding: 0 5px;
+        overflow: hidden;
+        height: 19px;
+    }
+
+.btnX, .btnY {
+    font-size: 20px;
+    font-family: monospace;
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    line-height: 0.7;
+    text-align: center;
+    width: 16px;
+    height: 16px;
+    user-select: none;
+    cursor: pointer;
+    border: solid 1px gray;
+}
+
+.btnX {
+    right: 30px;
+    top: 20px;
+}
+
+.btnY {
+    right: 7px;
+    top: 9px;
+}
+
+:host(.clsHide) {
+    display:none;
+}
+
+:host(.clsShow) {
+    animation: show 700ms;
+    animation-fill-mode: forwards;
+}
+
+@-moz-keyframes show {
+    from {
+        opacity: 0;
+        display:none;
+        visibility:hidden;
+    }
+
+    to {
+        opacity: 1;
+        display: block;
+        visibility:visible;
+    }
+}
+
+@-webkit-keyframes show {
+    from {
+        opacity: 0;
+        display:none;
+        visibility:hidden;
+    }
+
+    to {
+        opacity: 1;
+        display: block;
+        visibility:visible;
+    }
+}
+
+@keyframes show {
+    from {
+        opacity: 0;
+        display:none;
+        visibility:hidden;
+    }
+
+    to {
+        opacity: 1;
+        display: block;
+        visibility:visible;
+    }
+}

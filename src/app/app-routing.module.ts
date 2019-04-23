@@ -1,10 +1,30 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { Routes, RouterModule, Route } from '@angular/router';
 
-const routes: Routes = [];
+import { AdminPanel } from "./components/AdminPanel"
+import { UserPanel } from "./components/UserPanel"
+import { ModalWindow } from './components/ModalWindow';
+
+const routes: Route[] = [
+  {
+    path: 'adminpanel',
+    component: AdminPanel
+  },
+  {
+    path: 'userpanel',
+    component: UserPanel
+  },
+  {
+    path: "**",
+    redirectTo: "userpanel"
+  }
+
+];
+
 
 @NgModule({
+  declarations:[ AdminPanel, UserPanel, ModalWindow],
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule, AdminPanel, UserPanel]
 })
 export class AppRoutingModule { }

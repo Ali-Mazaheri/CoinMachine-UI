@@ -1,1 +1,61 @@
 /* You can add global styles to this file, and also import other style files */
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+ .button{
+    display: inline-block;
+    width: 100px;
+    background-color: whitesmoke;
+    text-align: center;
+    outline: none;
+    border: solid 1px lightgray;
+    cursor: pointer;
+    border-radius: 3px;
+    padding: 5px;
+    box-shadow: 1px 1px 2px darkgrey;
+    user-select: none;
+} 
+.button:hover{
+    box-shadow: 1px 1px 2px black;
+}
+
+.button:active{
+    box-shadow: 0px 0px 2px black;
+}
+
+.linkHeader{
+    display: block;
+    height: 35px;
+    background-color: whitesmoke;
+}
+.linkHeader > a{
+    display: inline-block;
+    width: 80px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    color: navy;
+
+}
+.linkHeader > a.activeRoute{
+    border-bottom-width: 3px;
+    border-bottom-color: blue;
+    border-bottom-style: solid;
+}
+
+.tbl{
+    display: table;
+}
+
+.tbl .tblRow{
+    display: table-row;
+}
+
+.tbl .tblRow .tblCell{
+    display: table-cell;
+}

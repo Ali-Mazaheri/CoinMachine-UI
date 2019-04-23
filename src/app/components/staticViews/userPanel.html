@@ -1,0 +1,37 @@
+<div class="userPanel">
+    <div class="rowContainer">
+        <span class="button" (click)="billInserted(1)">$1</span>
+        <span class="button" (click)="billInserted(2)">$2</span>
+        <span class="button" (click)="billInserted(5)">$5</span>
+        <span class="button" (click)="billInserted(10)">$10</span>
+        <span class="button" (click)="billInserted(20)">$20</span>
+        <span class="button" (click)="billInserted(50)">$50</span>
+        <span class="button" (click)="billInserted(100)">$100</span>
+    </div>
+    <br />
+    <hr />
+    <br />
+    <div class="rowContainer">
+        <div class="tbl">
+            <div class="tblRow">
+                <div class="tblCell">Penny</div>
+                <div class="tblCell">Nickel</div>
+                <div class="tblCell">Dime</div>
+                <div class="tblCell">Quarter</div>
+            </div>
+            <div class="tblRow">
+                <div class="tblCell">{{model.penny}}</div>
+                <div class="tblCell">{{model.nickel}}</div>
+                <div class="tblCell">{{model.dime}}</div>
+                <div class="tblCell">{{model.quarter}}</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="rowContainer buttonBox">
+        <span (click)="approved()" class="button">Approve</span>
+    </div>
+    <modalWindow>
+        {{alert}}
+    </modalWindow>
+</div>

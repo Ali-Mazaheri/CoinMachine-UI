@@ -1,0 +1,13 @@
+<span (click)="hide()" class="btnX">X</span>
+<div class="container">
+    <div class="header">
+        <span class="title">{{title}}</span>
+        <span (click)="hide()" class="btnY">x</span>
+    </div>
+    <div class="body">
+        <ng-content></ng-content>
+    </div>
+    <div class="footer">
+        <span (click)="hide()" class="button">close</span>
+    </div>
+</div>

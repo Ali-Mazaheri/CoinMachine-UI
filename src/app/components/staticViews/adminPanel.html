@@ -1,0 +1,41 @@
+<div class="adminPanel">
+    <div class="rowContainer header">
+        <h4>
+            <label class="label">Inventory Value: </label>
+            <label class="label">{{ "$" +  model.getAmount()}}</label>
+        </h4>
+    </div>
+
+    <div class="rowContainer">
+        <span class="unit">Penny</span>
+        <input class="update" (input)="adjustValue($event.target, 'penny')" type="text"
+            [value]="updateModel.penny" />
+        <span class="quantity">{{model.penny}}</span>
+    </div>
+    <div class="rowContainer">
+        <span class="unit">Nickel</span>
+        <input class="update" (input)="adjustValue($event.target, 'nickel')" type="text"
+            [value]="updateModel.nickel" />
+        <span class="quantity">{{model.nickel}}</span>
+    </div>
+
+    <div class="rowContainer">
+        <span class="unit">Dime</span>
+        <input class="update" (input)="adjustValue($event.target, 'dime')" type="text"
+            [value]="updateModel.dime" />
+        <span class="quantity">{{model.dime}}</span>
+    </div>
+
+    <div class="rowContainer">
+        <span class="unit">Quarter</span>
+        <input class="update" (input)="adjustValue($event.target, 'quarter')" type="text"
+            [value]="updateModel.quarter" />
+        <span class="quantity">{{model.quarter}}</span>
+    </div>
+
+    <div class="rowContainer buttonBox">
+        <span class="button" (click)="topup()">Topop</span>
+        <span class="button" (click)="setInventory()">Set</span>
+    </div>
+
+</div>
